@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="cart.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>BOOKING FEE CALCULATOR</h1>
+        </header>
+        <a href="descriptions.html">Service and Pricing Descriptions</a>
+        <section id="eventTypes">
+            <h3>Event Type</h3>
+            <p>Choose an event type by clicking a button below.</p>
+            <button id="wedding" name="eventType" value="Wedding" onclick="wedding()">
+                Wedding
+            </button>
+            <button id="branch" name="eventType" value="Branch" onclick="branch()">
+                Branch
+            </button>
+            <button id="dinner" name="eventType" value="Dinner" onclick="dinner()">
+                Dinner
+            </button>
+            <button id="party" name="eventType" value="Party" onclick="party()">
+                Party
+            </button>  
+        </section>
+        <section>
+            <section id="weddingDetail" class="hidden-visibility">
+                <p><strong>Selected Event Type: </strong> Wedding</p>
+                <p id="weddingServiceOptiions"><strong>Wedding Service Options</strong></p>
+                <button id="basicService" name="weddingDetail" value="Basic Service" onclick="basicService()">
+                    Basic Service
+                </button>
+                <button id="receptionOnly" name="weddingDetail" value="Reception Only" onclick="receptionOnly()">
+                    Reception Only
+                </button>
+                <div >
+                    <p id="basicServiceInfo" class="weddingFeeInfo">
+                        <strong>Selected Option: </strong>Basic Service <br>
+                            $350
+    
+                    </p>
+                    <p id="receptionOnlyInfo" class="weddingFeeInfo">
+                        <strong>Selected Option: </strong>Reception Only<br>
+                            $350 base + extension:
+    
+                    </p>
+                </div>
+               
+
+
+            </section>
+        </section>
+        <footer></footer>
+    </body>
+</html>

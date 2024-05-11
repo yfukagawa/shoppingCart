@@ -1,0 +1,23 @@
+h2{
+    margin: 50px 0 0 0;
+}
+
+h3{
+    margin-bottom: 10px;
+}
+
+dl {
+    margin-left: 20px;
+}
+
+.extraSpaceTop{
+    margin-top: 10px;
+}
+
+#feeBreakDown {
+    margin-top: 50px;
+}
+
+.hidden-visibility {
+    visibility: hidden;
+    }
