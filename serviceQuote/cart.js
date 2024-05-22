@@ -43,11 +43,16 @@ function party() {
 }
 
 function basicService() {
+    var ac = document.getElementById('addCocktail');
+    var cl = document.getElementById('cocktailLength');
+    var ar = document.getElementById('addReception');
+    var rl = document.getElementById('receptionLength');
     var x = document.getElementById('basicServiceInfo');
     var y = document.getElementById('receptionOnlyInfo');
     if(x.style.visibility !== 'visible') {
         x.style.visibility = 'visible';
     }
+    
     
         y.style.visibility = 'hidden';
 }

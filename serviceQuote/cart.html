@@ -42,20 +42,20 @@
                             <strong>Selected Option: </strong>Basic Service <br>
                                 $350
                         </p>
-                        <p>
-                            Add <strong>Cocktail Hour</strong><br>
+                        <p id="addCocktail" class="hidden-visibility">
+                            <input type="checkbox"> Add <strong>Cocktail Hour</strong></input><br>
                             $100 (30 - 60 min) <br>
                             + optional extension ($50 per additional 30 min)
-                            <form >
+                            <form id="cocktailLength" class="hidden-visibility">
                                 <label for="cocktailExtension">enter the length</label>
                                 <input type="text" id="cocktailExtension" name="cocktailExtension">
                             </form>
                         </p>
-                        <p>
-                            Add <strong>Reception</strong><br>
+                        <p id="addReception" class="hidden-visibility">
+                            <input type="checkbox">Add <strong>Reception</strong><br></input>
                             $100 /hr<br>
                             How many hours?
-                            <form >
+                            <form id="receptionLength" class="hidden-visibility">
                                 <label for="receptionDuration">enter the length</label>
                                 <input type="text" id="receptionDuration" name="receptionDuration">
                             </form>
