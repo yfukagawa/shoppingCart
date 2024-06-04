@@ -16,20 +16,16 @@
             <button id="wedding" name="eventType" value="Wedding" onclick="wedding()">
                 Wedding
             </button>
-            <button id="branch" name="eventType" value="Branch" onclick="branch()">
-                Branch
+            <button id="other" name="eventType" value="Other" onclick="other()">
+                Non Wedding
             </button>
-            <button id="dinner" name="eventType" value="Dinner" onclick="dinner()">
-                Dinner
-            </button>
-            <button id="party" name="eventType" value="Party" onclick="party()">
-                Party
-            </button>  
         </section>
-        <section>
+        <section id="eventDetails">
             <section id="weddingDetail" class="hidden-visibility">
                 <p><strong>Selected Event Type: </strong> Wedding</p>
-                <p id="weddingServiceOptiions"><strong>Wedding Service Options</strong></p>
+                <p id="weddingServiceOptiions" class="wedding">
+                    <strong>Wedding Service Options</strong>
+                </p>
                 <button id="basicService" name="weddingDetail" value="Basic Service" onclick="basicService()">
                     Basic Service
                 </button>
@@ -47,7 +43,7 @@
                             $100 (30 - 60 min) <br>
                             + optional extension ($50 per additional 30 min)
                             <form id="cocktailLength" class="hidden-visibility">
-                                <label for="cocktailExtension">enter the length</label>
+                                <label for="cocktailExtension">Enter the total length (mins)</label>
                                 <input type="text" id="cocktailExtension" name="cocktailExtension">
                             </form>
                         </p>
@@ -56,22 +52,37 @@
                             $100 /hr<br>
                             How many hours?
                             <form id="receptionLength" class="hidden-visibility">
-                                <label for="receptionDuration">enter the length</label>
+                                <label for="receptionDuration">Enter the total length (hrs)</label>
                                 <input type="text" id="receptionDuration" name="receptionDuration">
                             </form>
                         </p>
                     </section>
                     
                     
-                    <p id="receptionOnlyInfo" class="weddingFeeInfo">
+                    <p id="receptionOnlyInfo" class="weddingFeeInfo hidden-visibility">
                         <strong>Selected Option: </strong>Reception Only<br>
-                            $350 base + extension:
-    
+                            $350 base + extension($100/hr):
                     </p>
+                    <form id="receptionOnlyLength" class="hidden-visibility">
+                        <label for="receptionOnlyDuration">enter the length (hrs)</label>
+                        <input type="text" id="receptionOnlyDuration" name="receptionOnlyDuration">
+                    </form>
                 </div>
-               
 
+            </section>
 
+            <section id="backgroundMusic" class="hidden-visibility">
+                <input type="radio" id="branch" name="backgroundMusicType" value="Branch">
+                <label for="branch">Branch</label><br>
+                <input type="radio" id="dinner" name="backgroundMusicType" value="Dinner">
+                <label for="dinner">Dinner</label><br>
+                <input type="radio" id="party" name="backgroundMusicType" value="Party">
+                <label for="other">Party</label><br>
+                <form id="backgroundLength" class="hidden-visibility">
+                    $300 base + extension($100/hr):
+                    <label for="backgroundDuration">enter the total length (hrs)</label><br>
+                    <input type="text" id="backgroundDuration" name="backgroundDuration">
+                </form>
             </section>
         </section>
         <footer></footer>

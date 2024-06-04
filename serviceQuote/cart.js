@@ -1,70 +1,65 @@
 let eventIndex = 0;
 
+// Wedding
 function wedding() {
-    eventIndex = 1;
     var x = document.getElementById('weddingDetail');
-    if(x.style.visibility !== 'visible') {
-        x.style.visibility = 'visible';
-    } 
+
+    eventIndex = 1;
+    x.style.visibility = 'visible';
+    hideBackgroundMusic(); 
     multiHide();
     console.log('wedding', eventIndex)
     
 }
-function branch() {
-    eventIndex = 2;
-    var x = document.getElementById('weddingDetail');
-    if(x.style.visibility !== 'hidden') {
-        x.style.visibility = 'hidden';
-    } 
-    multiHide();
-    console.log('branch', eventIndex)
-    
-}
-
-function dinner() {
-    eventIndex = 2;
-    var x = document.getElementById('weddingDetail');
-    if(x.style.visibility !== 'hidden') {
-        x.style.visibility = 'hidden';
-    } 
-    multiHide();
-    console.log('dinner', eventIndex)
-    
-}
-
-function party() {
-    eventIndex = 2;
-    var x = document.getElementById('weddingDetail');
-    if(x.style.visibility !== 'hidden') {
-        x.style.visibility = 'hidden';
-    } 
-    multiHide();
-    console.log('party', eventIndex)
-}
 
 function basicService() {
+    var x = document.getElementById('basicServiceInfo');
+    var y = document.getElementById('receptionOnlyInfo');
+    var yy = document.getElementById('receptionOnlyLength');
     var ac = document.getElementById('addCocktail');
     var cl = document.getElementById('cocktailLength');
     var ar = document.getElementById('addReception');
     var rl = document.getElementById('receptionLength');
-    var x = document.getElementById('basicServiceInfo');
-    var y = document.getElementById('receptionOnlyInfo');
-    if(x.style.visibility !== 'visible') {
-        x.style.visibility = 'visible';
-    }
     
-    
-        y.style.visibility = 'hidden';
+    x.style.visibility = 'visible';
+    ac.style.visibility = 'visible';
+    cl.style.visibility = 'visible';
+    ar.style.visibility = 'visible';
+    rl.style.visibility = 'visible';
+    y.style.visibility = 'hidden';
+    yy.style.visibility = 'hidden';
+
 }
 function receptionOnly() {
-    var y = document.getElementById('basicServiceInfo');
     var x = document.getElementById('receptionOnlyInfo');
-    if(x.style.visibility !== 'visible') {
-        x.style.visibility = 'visible';
-    }
-    
-        y.style.visibility = 'hidden';
+    var xx = document.getElementById('receptionOnlyLength');
+    var y = document.getElementById('basicServiceInfo');
+    var ac = document.getElementById('addCocktail');
+    var cl = document.getElementById('cocktailLength');
+    var ar = document.getElementById('addReception');
+    var rl = document.getElementById('receptionLength');
+        
+    x.style.visibility = 'visible';
+    xx.style.visibility = 'visible';
+    y.style.visibility = 'hidden';
+    ac.style.visibility = 'hidden';
+    cl.style.visibility = 'hidden';
+    ar.style.visibility = 'hidden';
+    rl.style.visibility = 'hidden';
+        
+}
 
+// Others
+function other() {
+    var bm = document.getElementById('backgroundMusic');
+    var bml = document.getElementById('backgroundLength');
+
+    bm.style.visibility = 'visible';
+    bml.style.visibility = 'visible';
+    eventIndex =2;
+    hideWedding();
+    multiHide();
+    
 }
 
 function multiHide() {
@@ -72,5 +67,30 @@ function multiHide() {
     var z = document.getElementById('receptionOnlyInfo');
     y.style.visibility = 'hidden';
     z.style.visibility = 'hidden';
+}
+
+function hideWedding() {
+    var x = document.getElementById('weddingDetail');
+    var xx = document.getElementById('receptionOnlyLength');
+    var y = document.getElementById('basicServiceInfo');
+    var z = document.getElementById('receptionOnlyInfo');
+    var ac = document.getElementById('addCocktail');
+    var cl = document.getElementById('cocktailLength');
+    var ar = document.getElementById('addReception');
+    var rl = document.getElementById('receptionLength');
+    
+    x.style.visibility = 'hidden';
+    xx.style.visibility = 'hidden';
+    y.style.visibility = 'hidden';
+    z.style.visibility = 'hidden';
+    ac.style.visibility = 'hidden';
+    cl.style.visibility = 'hidden';
+    ar.style.visibility = 'hidden';
+    rl.style.visibility = 'hidden';
+}
+
+function hideBackgroundMusic() {
+    var x = document.getElementById('backgroundMusic');
+    x.style.visibility = 'hidden'; 
 }
 
